@@ -14,7 +14,7 @@ const Nav = ({ Toggle }) => {
                 <ul className="navbar-nav ms-auto mt-2  mt-lg-0">
                     <li className="nav-item dropdown ">
                         <a className="nav-link dropdown-toggle text-white" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Trishi Portal
+                            User
                         </a>
                         <div className="dropdown-menu" aria-labelledby="dropdownId">
                             <a className="dropdown-item" href="#">
