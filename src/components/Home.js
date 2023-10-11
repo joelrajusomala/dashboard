@@ -1,13 +1,13 @@
 import React from "react"
 import Nav from "./Nav"
 
-const Home = () => {
+const Home = ({ Toggle }) => {
     return (
-        <div>
-            <Nav />
+        <div className="">
+            <Nav Toggle={Toggle} />
             <div className="px-2">
                 <div className="container-fluid ">
-                    <div className="row g-3 my-2">
+                    <div className="row g-3 py-4">
                         <div className="col-md-3">
                             <div className="p-3 bg-white shadow-sm d-flex justify-content-around align-items-center rounded">
                                 <div>
@@ -46,8 +46,8 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <table class="table caption-top bg-white rounded mt-2">
-                    <caption className="text-white fs-4">List of Jobs</caption>
+                <table class="table bg-white rounded mt-2">
+                    {/* <caption className="text-white fs-4">List of Jobs</caption> */}
                     <thead>
                         <tr>
                             <th scope="col">#</th>

@@ -1,17 +1,26 @@
-import React from "react"
+import React, { useState } from "react"
 import SideBar from "./SideBar"
 import Home from "./Home"
 import "./dashboard.css"
 
 const DashBoard = () => {
+    const [toggle, setToggle] = useState(true)
+
+    const Toggle = () => {
+        setToggle(!toggle)
+    }
+
     return (
-        <div className="container-fluid bg-secondary min-vh-100">
+        <div className="container-fluid  min-vh-100 dashboard">
             <div className="row">
-                <div className="col-2 px-0 bg-white vh-100">
-                    <SideBar></SideBar>
-                </div>
-                <div className="col-10 px-0">
-                    <Home></Home>
+                {toggle && (
+                    <div className="col-4 col-md-2 px-0  bg-primary vh-100 position-fixed">
+                        <SideBar></SideBar>
+                    </div>
+                )}
+                {toggle && <div className="col-4 col-md-2"></div>}
+                <div className="col px-0">
+                    <Home Toggle={Toggle}></Home>
                 </div>
             </div>
         </div>
